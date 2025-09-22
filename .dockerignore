@@ -1,0 +1,36 @@
+# VCS & editor
+.git
+.gitignore
+.vscode
+.idea
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info
+dist/
+build/
+.python-version
+.pytest_cache/
+.mypy_cache/
+
+# Virtual envs
+venv/
+.venv/
+
+# OS junk
+.DS_Store
+
+# Local configuration
+.env
+
+# Large or generated data (mounted at runtime via compose)
+chroma-db/
+knowledge-base/
+
+# Docker build artifacts
+Dockerfile
+docker-compose.yml

@@ -1,0 +1,20 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chatbot-api
+    command: ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1 --reload"]
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./chroma-db:/chroma-db
+      - ./knowledge-base:/knowledge-base:ro
+      - model-cache:/cache
+    restart: unless-stopped
+
+volumes:
+  model-cache:
