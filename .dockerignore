@@ -29,7 +29,6 @@ venv/
 
 # Large or generated data (mounted at runtime via compose)
 chroma-db/
-knowledge-base/
 
 # Docker build artifacts
 Dockerfile
